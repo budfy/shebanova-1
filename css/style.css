@@ -1,0 +1,41 @@
+:root {
+  --color__green-1: #5EAE53;
+  --color__green-2: #AFD3AA;
+  --color__yellow: #F6B76C;
+  --color__orange: #F49B3F;
+  --color__rose: #EB8E78;
+
+  --shadow__hover: 0.75rem 1.25rem 2.5rem rgba(97, 49, 0, 0.2);
+
+  /* px - pixel - размеры меньше или равно 2px, границы, тени(не все!), мелкие элементы */
+
+  /* % - percentage */
+
+  /* rem = 16px относительно базового размера шрифта*/
+  /* em - единица измерения относительно размера шрифта данного элемента */
+  /* ch - как rem, только по ширине */
+
+  /* vw/vh - viewport width/viewport height - ширина или высота видимой области сайта*/
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 200vh;
+}
+
+ul,
+ol,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
