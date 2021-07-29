@@ -3,21 +3,9 @@
   --color__green-2: #AFD3AA;
   --color__yellow: #F6B76C;
   --color__orange: #F49B3F;
-  --color__rose: #eb8e78;
+  --color__rose: #EB8E78;
 
   --shadow__hover: 0.75rem 1.25rem 2.5rem rgba(97, 49, 0, 0.2);
-
-  /* NOTE:
-  box-shadow: смещение по оси X смещение по оси Y градиентная размытость тени цвет*/
-
-  /* NOTE: цвета */
-  /* RGB/RGBA - формат написания цвета, в ктором красный(RED), зелёный(GREEN) и синий(BLUE) цвета записываются интенсивностью от 0 до 255 */
-
-  /* HEX - формат rgb, записанный в 16-ричной системе счисления без пробелов*/
-
-  /* hsl - формат цвета, в котором записываается тон, насыщенность и светлота цвета */
-
-  /* NOTE: единицы измерения*/
 
   /* px - pixel - размеры меньше или равно 2px, границы, тени(не все!), мелкие элементы */
 
@@ -28,6 +16,62 @@
   /* ch - как rem, только по ширине */
 
   /* vw/vh - viewport width/viewport height - ширина или высота видимой области сайта*/
+}
+
+/* G-NOTE: Директивы CSS */
+
+/* NOTE: font-face */
+@font-face {
+  font-family: 'Caveat';
+  /* шрифтовое семейство */
+  src: local('Caveat-Bold'),
+    local('Caveat Bold'),
+    url(../fonts/caveat/Caveat-Bold.woff2) format('woff2'),
+    url(../fonts/caveat/Caveat-Bold.woff) format('woff');
+  font-style: normal;
+  /* font-style: normal, italic, oblique */
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caveat';
+  /* шрифтовое семейство */
+  src: local('Caveat-SemiBold'),
+    local('Caveat SemiBold'),
+    url(../fonts/caveat/Caveat-SemiBold.woff2) format('woff2'),
+    url(../fonts/caveat/Caveat-SemiBold.woff) format('woff');
+  font-style: normal;
+  /* font-style: normal, italic, oblique */
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caveat';
+  /* шрифтовое семейство */
+  src: local('Caveat-Medium'),
+    local('Caveat Medium'),
+    url(../fonts/caveat/Caveat-Medium.woff2) format('woff2'),
+    url(../fonts/caveat/Caveat-Medium.woff) format('woff');
+  font-style: normal;
+  /* font-style: normal, italic, oblique */
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caveat';
+  /* шрифтовое семейство */
+  src: local('Caveat'),
+    local('Caveat Regular'),
+    local('Caveat-Regular'),
+    url(../fonts/caveat/Caveat-Regular.woff2) format('woff2'),
+    url(../fonts/caveat/Caveat-Regular.woff) format('woff');
+  font-style: normal;
+  /* font-style: normal, italic, oblique */
+  font-weight: 400;
+  font-display: swap;
 }
 
 *,
@@ -50,4 +94,39 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+
+/* Директива запроса типа устройства, с которого просматривается сайт и размеров окна, в котором он открыт (не физических!!!) */
+@media screen and (max-width:1200px) {
+  body {
+    color: red;
+  }
+}
+
+/* Директива ключевых кадров для анимации в процентах времени её проигрывания */
+@keyframes pulse {
+  0% {}
+
+  20% {
+    color: blue;
+  }
+
+  40% {
+    color: green;
+  }
+
+  98% {
+    color: orange;
+  }
+}
+
+/* Директива поддержки какого-то CSS-свойства браузером (если поддерживается, то выполняется код в скобках) */
+@supports (display: flex) {
+  div {
+    align-self: stretch;
+  }
+}
+
+div {
+  float: left;
 }
