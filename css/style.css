@@ -1,12 +1,17 @@
+/* STYLE: vars */
 :root {
+  --color__white: #ffffff;
+  --color__white-a: rgb(255 255 255 / 30%);
   --color__green-1: #5EAE53;
   --color__green-2: #AFD3AA;
   --color__yellow: #F6B76C;
   --color__orange: #F49B3F;
   --color__rose: #EB8E78;
+  --color__grey-1: #dadada;
+  --color__grey-2: #999999;
 
   --shadow__hover: 0.75rem 1.25rem 2.5rem rgba(97, 49, 0, 0.2);
-
+  /* !STYLE: vars */
   /* px - pixel - размеры меньше или равно 2px, границы, тени(не все!), мелкие элементы */
 
   /* % - percentage */
@@ -21,6 +26,8 @@
 /* G-NOTE: Директивы CSS */
 
 /* NOTE: font-face */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+
 @font-face {
   font-family: 'Caveat';
   /* шрифтовое семейство */
@@ -80,8 +87,11 @@
   box-sizing: border-box;
 }
 
+/* STYLE: global */
+
 body {
   min-height: 200vh;
+  font-family: 'DM Sans', Arial, Helvetica, sans-serif;
 }
 
 ul,
@@ -96,37 +106,103 @@ h6 {
   margin: 0;
 }
 
-/* Директива запроса типа устройства, с которого просматривается сайт и размеров окна, в котором он открыт (не физических!!!) */
-@media screen and (max-width:1200px) {
-  body {
-    color: red;
-  }
+/* !STYLE: global */
+
+/* STYLE: btn */
+.btn {
+  padding: 0.75em 2.25em;
+  line-height: 1.25;
+  border: 1px solid var(--border-color);
+  border-radius: 0.25em;
+  cursor: pointer;
+  background-color: var(--bg-color);
+  -webkit-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  transition: all 0.24s;
+  transform-origin: center;
+  color: var(--text-color);
+  --border-color: var(--color__white-a);
+  --text-color: var(--color__white);
+  --bg-color: transparent;
 }
 
-/* Директива ключевых кадров для анимации в процентах времени её проигрывания */
-@keyframes pulse {
-  0% {}
-
-  20% {
-    color: blue;
-  }
-
-  40% {
-    color: green;
-  }
-
-  98% {
-    color: orange;
-  }
+.btn.--secondary {
+  --border-color: var(--color__rose);
+  --bg-color: var(--color__rose);
 }
 
-/* Директива поддержки какого-то CSS-свойства браузером (если поддерживается, то выполняется код в скобках) */
-@supports (display: flex) {
-  div {
-    align-self: stretch;
-  }
+.btn:hover {
+  --bg-color: var(--color__white);
+  --text-color: var(--color__green-1);
 }
 
-div {
-  float: left;
+.btn.--secondary:hover {
+  --text-color: var(--color__rose);
+  --border-color: var(--color__white);
 }
+
+.btn:focus {
+  outline: transparent;
+}
+
+.btn:focus-visible {
+  transform: scale(1.05);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn:disabled {
+  --text-color: var(--color__grey-2);
+  --border-color: var(--color__grey-2);
+  --bg-color: var(--color__grey-1);
+}
+
+/* !STYLE: btn*/
+
+/* STYLE: text-field */
+.text-field {}
+
+.text-field__label {
+  display: block;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1.33;
+  text-transform: uppercase;
+}
+
+.text-field__input {
+  margin-top: 0.75em;
+  border: 1px solid var(--color__grey-1);
+  background-color: var(--color__white);
+  border-radius: 0.75em;
+  padding: 0.5em 1em;
+  -webkit-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  transition: all 0.24s;
+}
+
+.text-field__input:hover {
+  transform: scale(1.05);
+}
+
+.text-field__input:focus {
+  outline: transparent;
+}
+
+.text-field__input:focus-visible {
+  border-color: var(--color__rose);
+}
+
+.text-field__input:disabled {
+  background-color: var(--color__grey-1);
+}
+
+.text-field__input::placeholder {
+  color: var(--color__grey-2);
+}
+
+/* !STYLE: text-field */
