@@ -12,22 +12,153 @@
     <link rel="preconnect"
           href="https://fonts.gstatic.com"
           crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
           rel="stylesheet">
     <link rel="stylesheet"
           href="css/normalize.css">
     <link rel="stylesheet"
           href="css/style.css">
-    <title>Fonditas </title>
+    <link rel="icon"
+          href="img/favicon.svg"
+          sizes="any"
+          type="image/svg+xml">
+    <link rel="shortcut icon"
+          href="img/favicon.webp"
+          type="image/x-icon">
+    <link rel="shortcut icon"
+          href="img/favicon.png"
+          type="image/x-icon">
+    <title>Healthy switcher</title>
   </head>
 
   <body>
-    <label class="text-field">
-      <span class="text-field__label">Some label</span>
-      <input class="text-field__input"
-             type="text"
-             placeholder="Your name">
-    </label>
+    <div class="page-wrapper flex --align-center --just-space">
+      <div class="page-content">
+        <div class="top-bar">
+          <div class="container">
+            <nav class="top-bar__content flex --just-space --align-center">
+              <a href="#header"
+                 class="top-bar__logo">
+                <img src="img/logo.svg"
+                     alt="Healthy switcher logo">
+              </a>
+              <ul class="top-bar__list flex --align-center --just-end">
+                <li class="top-bar__list-item">
+                  <a href="#"
+                     class="top-bar__link">About</a>
+                </li>
+                <li class="top-bar__list-item">
+                  <a href="#"
+                     class="top-bar__link">Work</a>
+                </li>
+                <li class="top-bar__list-item">
+                  <a href="#"
+                     class="top-bar__link">Dishes</a>
+                </li>
+                <li class="top-bar__list-item">
+                  <a href="#"
+                     class="top-bar__link">Chefs</a>
+                </li>
+                <li class="top-bar__list-item">
+                  <a href="#"
+                     class="top-bar__link">Recipes</a>
+                </li>
+                <li class="top-bar__list-item">
+                  <a href="#"
+                     class="top-bar__link">Social</a>
+                </li>
+                <li class="top-bar__list-item">
+                  <a href="#"
+                     class="top-bar__link">Contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <header class="header"
+                id="header">
+          <div class="container --s ">
+            <div class="header__inner flex --just-space --align-center">
+              <h1 class="header__title"><span class="header__title-part">Your <strong>favourite food</strong></span>
+                <span class="header__title-part">delivered <strong>hot & fresh</strong></span>
+              </h1>
+              <p class="header__text"><span class="company-name">Healthy switcher</span> chefs do all the prep work, like peeling, chopping & marinating, so you can cook a fresh homemade dinner in just 15 minutes.</p>
+              <button class="btn header__btn"
+                      type="button">Order Now</button>
+              <address class="header__address address flex --just-space">
+                <article class="address__item">
+                  <img src="img/icons/clock.svg"
+                       alt="Clock icon"
+                       class="address__item-icon">
+                  <span class="address__item-info">Today 10:00 am - 7:00 pm</span>
+                  <h3 class="address__item-title">Working hours</h3>
+                </article>
+                <article class="address__item">
+                  <img src="img/icons/map-point.svg"
+                       alt="Clock icon"
+                       class="address__item-icon">
+                  <a href="https://goo.gl/maps/SjHqwtRih3R1XRtC6"
+                     class="address__item-info --link"
+                     target="_blank"
+                     rel="nofollow">Kyiv, Velyka Vasylkivska, 100</a>
+                  <h3 class="address__item-title">Get Directions</h3>
+                </article>
+                <article class="address__item">
+                  <img src="img/icons/call.svg"
+                       alt="Clock icon"
+                       class="address__item-icon">
+                  <a href="tel:+380638332415"
+                     class="address__item-info --link">+38 (063)833 24 15</a>
+                  <h3 class="address__item-title">Call Online</h3>
+                </article>
+              </address>
+            </div>
+          </div>
+        </header>
+        <main class="main">
+
+        </main>
+      </div>
+      <footer class="footer">
+        <address class="footer__address address">
+          <div class="container --s flex --just-space">
+            <article class="address__item">
+              <img src="img/icons/clock.svg"
+                   alt="Clock icon"
+                   class="address__item-icon">
+              <span class="address__item-info">Today 10:00 am - 7:00 pm</span>
+              <h3 class="address__item-title">Working hours</h3>
+            </article>
+            <article class="address__item">
+              <img src="img/icons/map-point.svg"
+                   alt="Clock icon"
+                   class="address__item-icon">
+              <a href="https://goo.gl/maps/SjHqwtRih3R1XRtC6"
+                 class="address__item-info --link"
+                 target="_blank"
+                 rel="nofollow">Kyiv, Velyka Vasylkivska, 100</a>
+              <h3 class="address__item-title">Get Directions</h3>
+            </article>
+            <article class="address__item">
+              <img src="img/icons/call.svg"
+                   alt="Clock icon"
+                   class="address__item-icon">
+              <a href="tel:+380638332415"
+                 class="address__item-info --link">+38 (063)833 24 15</a>
+              <h3 class="address__item-title">Call Online</h3>
+            </article>
+          </div>
+        </address>
+        <div class="footer__bottom">
+          <div class="container --s">
+            <img src="img/logo.svg"
+                 alt="Healthy switcher logo"
+                 class="footer__logo">
+            <p class="footer__copy">© Designed by Yellow Snow. All Rights Reserved. </p>
+          </div>
+        </div>
+      </footer>
+    </div>
   </body>
 
 </html>
