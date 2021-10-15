@@ -15,6 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
           rel="stylesheet">
     <link rel="stylesheet"
+          href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet"
           href="css/normalize.css">
     <link rel="stylesheet"
           href="css/style.css">
@@ -44,7 +46,7 @@
               </a>
               <ul class="top-bar__list flex --align-center --just-end">
                 <li class="top-bar__list-item">
-                  <a href="#"
+                  <a href="#about"
                      class="top-bar__link">About</a>
                 </li>
                 <li class="top-bar__list-item">
@@ -116,7 +118,107 @@
           </div>
         </header>
         <main class="main">
-
+          <!-- SECTION: about -->
+          <section class="about"
+                   id="about">
+            <div class="container">
+              <div class="about__inner">
+                <h2 class="about__title section-title"> <span class="section-title__main">The Basics Of Healthy Food</span> <span class="section__title-descr">About</span></h2>
+                <p class="about__descr">In aliqua ea ullamco ad est ex non deserunt nulla. Consectetur sint ea aliquip aliquip consectetur voluptate est. Eu minim dolore laboris enim mollit voluptate irure esse aliquip.</p>
+                <div class="about__slider flex --align-center --just-space">
+                  <div class="about__slider-btn swiper-button swiper-button-prev">
+                    <svg class="swiper-button-icon"
+                         viewBox="0 0 18 16"
+                         fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8H17"
+                            stroke="inherit"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                      <path d="M10 1L17 8L10 15"
+                            stroke="inherit"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="about__slider-inner swiper">
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="about__slide swiper-slide">
+                        <picture class="about__slide-pic">
+                          <img src="img/about/about-1.jpg"
+                               alt=""
+                               class="about__slide-image">
+                        </picture>
+                      </div>
+                      <div class="about__slide swiper-slide">
+                        <picture class="about__slide-pic">
+                          <img src="img/about/about-2.jpg"
+                               alt=""
+                               class="about__slide-image">
+                        </picture>
+                      </div>
+                      <div class="about__slide swiper-slide">
+                        <picture class="about__slide-pic">
+                          <img src="img/about/about-3.jpg"
+                               alt=""
+                               class="about__slide-image">
+                        </picture>
+                      </div>
+                      <div class="about__slide swiper-slide">
+                        <picture class="about__slide-pic">
+                          <img src="img/about/about-4.jpg"
+                               alt=""
+                               class="about__slide-image">
+                        </picture>
+                      </div>
+                      <div class="about__slide swiper-slide">
+                        <picture class="about__slide-pic">
+                          <img src="img/about/about-5.jpg"
+                               alt=""
+                               class="about__slide-image">
+                        </picture>
+                      </div>
+                      <div class="about__slide swiper-slide">
+                        <picture class="about__slide-pic">
+                          <img src="img/about/about-6.jpg"
+                               alt=""
+                               class="about__slide-image">
+                        </picture>
+                      </div>
+                      <div class="about__slide swiper-slide">
+                        <picture class="about__slide-pic">
+                          <img src="img/about/about-7.jpg"
+                               alt=""
+                               class="about__slide-image">
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="about__slider-btn swiper-button swiper-button-next">
+                    <svg class="swiper-button-icon"
+                         viewBox="0 0 18 16"
+                         fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8H17"
+                            stroke="inherit"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                      <path d="M10 1L17 8L10 15"
+                            stroke="inherit"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- !SECTION: about -->
         </main>
       </div>
       <footer class="footer">
@@ -159,6 +261,8 @@
         </div>
       </footer>
     </div>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 
 </html>
